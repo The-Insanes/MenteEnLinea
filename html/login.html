@@ -6,23 +6,26 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/login.css">
     </head>
     <body>
-        <div class="header"> 
+        <header> 
             <div class="logo_header">
                 <img src="../image/logo.svg" alt="logo"> 
             </div>
 
-            <div class="base_options">
+            <button class="base_options">
                 <div class="rectangle_1"></div>
                 <div class="rectangle_1"></div>
                 <div class="rectangle_1"></div>
-            </div>
-        </div>
+            </button>
+        </header>
 
         <div class="center_page">
-            <div class="login_base">
+            <form class="login_base">
                 <div class="login_logo">
                     <img src="../image/logo.svg" alt="logo">
                 </div>
@@ -42,31 +45,30 @@
                     <div class="circle_1"></div>
                     <div class="rectangle_2"></div>
                 </div>
-
-                <div class="buttom_selection">
+                
+                <button class="buttom_selection">
                     <img src="../image/google_logo.svg" alt="google_logo">
                     <div>Google</div>
-                </div>
+                </button>
                 
-                <div class="buttom_selection">
+                <button class="buttom_selection">
                     <img src="../image/twitter_logo.svg" alt="twitter_logo">
                     <div>X</div>
-                </div>
+                </button>
 
-                <div class="login_text">¿Has olvidado tu Contraseña?</div>
-
+                <a class="login_text" href="">¿Has olvidado tu Contraseña?</a>
                 <div class="login_buttom">
                     <div>Iniciar Sesión</div>
                 </div>
-            </div>
+            </form>
             
             <div class="register_base">
                 <div>No tienes una cuenta?</div>
-                <div class="Register_buttom">Regístrate</div>
+                <a href="">Regístrate</a>
             </div>
         </div>
         
-        <div class="footer">
+        <footer>
             <div class="info">
                 <div class="text_info">Contacto</div>
 
@@ -77,13 +79,13 @@
 
                 <div class="part_info">
                     <img src="../image/mail.svg" alt="mail">
-                    <div>mail@example.cl</div>
+                    <div>email@example.cl</div>
                 </div>
             </div>
 
             <div class="logo_footer">
                 <img src="../image/dark_logo.svg" alt="dark_logo">
             </div>
-        </div>
+        </footer>
     </body>
 </html>
