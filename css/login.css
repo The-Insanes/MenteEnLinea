@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 26px, 62px, 24px, 62px;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo_header {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.base_options {
+    display: flex;
+    width: 50px;
+}
+
+.rectangle_1 {
+    background-color: #4F80FF;
+    width: 46px;
+    height: 50px;
+    border-radius: 25px;
+}
