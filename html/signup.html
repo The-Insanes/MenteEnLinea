@@ -13,14 +13,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Enlace al CDN de jQuery Validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
         <link rel="stylesheet" href="../css/signup.css">
+        <script src="../script/signup.js"async></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
 
 
         <header> 
@@ -36,55 +36,56 @@
         </header>
 
         <div class="center_page">
-            <form class="login_base">
+            <form id ="myForm" class="login_base">
                 <div class="login_logo">
                     <img src="../image/logo.svg" alt="logo">
                 </div>
 
                 <div class="input_login">
                     <div> Nombre Completo</div>
-                    <input type="name" placeholder="Nombre Apellido">
+                    <input type="text" name= "name" placeholder="Nombre Apellido">
                 </div>
 
                 <div class="input_login">
                     <div>Usuario</div>
-                    <input type="user" placeholder="Example"> 
+                    <input type="text" name="username" placeholder="Example">
                 </div>
 
                 <div class="input_login">
                     <div>Correo Electronico</div>
-                    <input type="email" placeholder="email@gmail.com"> 
+                    <input type="email" name="email" placeholder="email@mail.com"> 
                 </div>
 
                 <div class="input_login">
                     <div>Contraseña</div>
-                    <input type="password" placeholder="*********"> 
-                    <div>La contraseña debe contener al menos:</div>
-                    <div><ul>
+                    <input type="password" id ="password" name="password" placeholder="*********"> 
+                </div>
+                <!--<div class="login_text">La contraseña debe contener <br>al menos:</div>
+                    <div class="login_text"><ul>
                         <li>8 caracteres </li>
                         <li>1 mayúscula</li>
                         <li>1 Caracter especial (#$%&*@)</li>
                     </ul></div>
-                </div>
-
+                -->
                 <div class="input_login">
                     <div>Confirmar contraseña</div>
-                    <input type="password" placeholder="*********"> 
+                    <input type="password" id="passwordConfirmation" name="passwordConfirmation" placeholder="*********"> 
+                    
                 </div>
 
                 <div class="input_login">
                     <div>Teléfono</div>
-                    <input type="phone number" placeholder="+56 9 XXXX XXXX"> 
+                    <input type="text" name="phoneNumber"placeholder="+56 9 XXXX XXXX">
                 </div>
 
                 <div class="input_login">
                     <div>Ciudad</div>
-                    <input type="city" placeholder="Ciudad"> 
+                    <input type="text" name = "city"placeholder="Ciudad">
                 </div>
 
                 <div class="input_login">
                     <div>Dirección</div>
-                    <input type="address" placeholder="Dirección"> 
+                    <input type="text" name="address" placeholder="Dirección">
                 </div>
 
                 <div class="sep">
@@ -94,14 +95,14 @@
                 </div>
 
                 <div class="login_buttom">
-                    <div>Regístrate</div>
+                    <input type="submit" value="Registrar">
                 </div>
             </form>
             
             <div class="register_base">
                 <div>Ya tienes una cuenta?</div>
                 
-                <a href="">Inicia sesión aquí</a>
+                <a href="login.html">Inicia sesión aquí</a>
             </div>
         </div>
 
