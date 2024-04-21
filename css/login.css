@@ -125,7 +125,7 @@ footer {
     border-radius: 35px;
 }
 
-.buttom_selection {
+.button_selection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,7 +152,7 @@ footer {
     color: #000000;
 }
 
-.login_buttom {
+.login_button {
     display: flex;
     align-items: center;
     justify-content: center;
