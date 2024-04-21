@@ -36,7 +36,7 @@
         </header>
 
         <div class="center_page">
-            <form id ="myForm" class="login_base">
+            <form id ="signup_form" class="login_base">
                 <div class="login_logo">
                     <img src="../image/logo.svg" alt="logo">
                 </div>
@@ -44,6 +44,11 @@
                 <div class="input_login">
                     <div> Nombre Completo</div>
                     <input type="text" name= "name" placeholder="Nombre Apellido">
+                </div>
+
+                <div class="input_login">
+                    <div> RUT</div>
+                    <input type="text" name= "rut" placeholder="XX.XXX.XXX-X">
                 </div>
 
                 <div class="input_login">
@@ -79,6 +84,35 @@
                 </div>
 
                 <div class="input_login">
+                    <div>Región</div>
+                    <select name="region" id="region">
+                        <option value="0" disabled selected>Seleccione región</option>
+                        <option value="15">Región de Arica y Parinacota</option>
+                        <option value="1">Región de Tarapacá</option>
+                        <option value="2">Región de Antofagasta</option>
+                        <option value="3">Región de Atacama</option>
+                        <option value="4">Región de Coquimbo</option>
+                        <option value="5">Región de Valparaíso</option>
+                        <option value="13">Región Metropolitana de Santiago</option>
+                        <option value="6">
+                          Región del Libertador General Bernardo O'Higgins
+                        </option>
+                        <option value="7">Región del Maule</option>
+                        <option value="16">Región de Ñuble</option>
+                        <option value="8">Región del Biobío</option>
+                        <option value="9">Región de La Araucanía</option>
+                        <option value="14">Región de Los Ríos</option>
+                        <option value="10">Región de Los Lagos</option>
+                        <option value="11">
+                          Región de Aysén del General Carlos Ibáñez del Campo
+                        </option>
+                        <option value="12">
+                          Región de Magallanes y de la Antártica Chilena
+                        </option>
+                      </select>
+                </div>
+
+                <div class="input_login">
                     <div>Ciudad</div>
                     <input type="text" name = "city"placeholder="Ciudad">
                 </div>
@@ -92,6 +126,11 @@
                     <div class="rectangle_2"></div>
                     <div class="circle_1"></div>
                     <div class="rectangle_2"></div>
+                </div>
+
+                <div class="input_checkbox">
+                        <input type="checkbox" name="tyc" id="tyc" />
+                        <div>Declaro haber leido y acepto los terminos y condiciones de usuario.</div>
                 </div>
 
                 <div class="login_buttom">
