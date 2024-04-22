@@ -9,7 +9,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Enlace al CDN de jQuery Validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
         <link rel="stylesheet" href="../css/login.css">
+        <script src="../script/login.js"async></script>
     </head>
     
     <body>
@@ -26,19 +30,19 @@
         </header>
 
         <div class="center_page">
-            <form class="login_base">
+            <form id ="login_form" class="login_base">
                 <div class="login_logo">
                     <img src="../image/logo.svg" alt="logo">
                 </div>
 
                 <div class="input_login">
                     <div> Correo o Usuario</div>
-                    <input type="email" placeholder="email@gmail.com">
+                    <input type="text" name="email" placeholder="email@gmail.com">
                 </div>
 
                 <div class="input_login">
                     <div>Contraseña</div>
-                    <input type="password" placeholder="*********"> 
+                    <input type="password" name="password" placeholder="*********"> 
                 </div>
 
                 <div class="sep">
@@ -58,14 +62,14 @@
                 </button>
 
                 <a class="login_text" href="">¿Has olvidado tu Contraseña?</a>
-                <div class="login_button">
-                    <div>Iniciar Sesión</div>
+                <div class="login_buttom">
+                    <input type="submit" value="Iniciar Sesión">
                 </div>
             </form>
             
             <div class="register_base">
                 <div>No tienes una cuenta?</div>
-                <a href="">Regístrate</a>
+                <a href="signup.html">Regístrate</a>
             </div>
         </div>
 
