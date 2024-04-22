@@ -27,6 +27,8 @@ footer {
     width: 100%;
 }
 
+
+
 .logo_header {
     display: flex;
     width: 50px;
@@ -88,6 +90,24 @@ footer {
         gap: 8px; 
         display: inline-flex"
     }
+
+    >select {
+        font-family: "Open Sans";
+        
+        width: 95%; 
+        height: 100%;
+        padding: 12px 12px;
+        background: white; 
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); 
+        border-radius: 8px;
+        border: 1px #E0E0E0 solid; 
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        gap: 8px; 
+        display: inline-flex"
+    }
+
+    
 }
 
 .sep {
@@ -125,7 +145,7 @@ footer {
     border-radius: 35px;
 }
 
-.button_selection {
+.buttom_selection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,7 +172,7 @@ footer {
     color: #000000;
 }
 
-.login_button {
+.login_buttom {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,13 +185,9 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
     >div {
-        font-family: "Open Sans";
         color: #ffffff;
     }
     >input {
-        font-family: "Open Sans";
-        color: #ffffff;
-        font-size: 14;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -186,6 +202,7 @@ footer {
 }
 
 .register_base {
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,4 +263,15 @@ footer {
     font-family: "Open Sans";
     margin-bottom: 5px;
     color: rgba(184, 7, 7, 0.952);
+}
+
+.input_checkbox  {
+    margin-top: 20px;
+    display: inline-flex;
+    >div {
+        font-size: 14px;
+        word-wrap: break-word;
+        font-family: "Open Sans";
+        margin-bottom: 5px;
+    }
 }

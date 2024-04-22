@@ -6,35 +6,66 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Enlace al CDN de jQuery Validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
         <link rel="stylesheet" href="../css/login.css">
+        <script src="../script/login.js"async></script>
+
+        <script src="../script/navbar.js"></script>
+        <link rel="stylesheet" href="../css/global.css"/>
+        <link rel="stylesheet" href="../css/index.css"/>
+
     </head>
+    
     <body>
-        <div class="header"> 
-            <div class="logo_header">
-                <img src="../image/logo.svg" alt="logo"> 
+        <header class="navbar">
+            <div class="navbar-logo-menu">
+              <div class="navbar-logo">
+                <div class="navbar-logo-image">
+                  <b class="navbar-logo-text">
+                    <span>Mente</span>
+                    <span class="navbar-logo-text-enlinea">EnLínea</span>
+                  </b>
+                  <img
+                    class="navbar-logo-image-icon"
+                    loading="lazy"
+                    alt=""
+                    src="../image/image.svg"
+                  />
+                </div>
+              </div>
+              <div class="navbar-menu-icon">
+                <div id="navbar-content" style="display: none;">
+                  <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="signup.html">Regístrate</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-menu-icon-1"></div>
+                <div class="navbar-menu-icon-2"></div>
+                <div class="navbar-menu-icon-3"></div>
+              </div>
             </div>
+          </header>
 
-            <div class="base_options">
-                <div clas="rectangle_1"></div>
-                <div clas="rectangle_1"></div>
-                <div clas="rectangle_1"></div>
-            </div>
-        </div>
-
-        <div>
-            <div class="login_base">
+        <div class="center_page">
+            <form id ="login_form" class="login_base">
                 <div class="login_logo">
                     <img src="../image/logo.svg" alt="logo">
                 </div>
 
                 <div class="input_login">
                     <div> Correo o Usuario</div>
-                    <input type="email" placeholder="email@gmail.com">
+                    <input type="text" name="email" placeholder="email@gmail.com">
                 </div>
 
                 <div class="input_login">
                     <div>Contraseña</div>
-                    <input type="password" placeholder="*********"> 
+                    <input type="password" name="password" placeholder="*********"> 
                 </div>
 
                 <div class="sep">
@@ -42,48 +73,47 @@
                     <div class="circle_1"></div>
                     <div class="rectangle_2"></div>
                 </div>
-
-                <div class="buttom_selection">
+                
+                <button class="button_selection">
                     <img src="../image/google_logo.svg" alt="google_logo">
                     <div>Google</div>
-                </div>
+                </button>
                 
-                <div class="buttom_selection">
+                <button class="button_selection">
                     <img src="../image/twitter_logo.svg" alt="twitter_logo">
                     <div>X</div>
-                </div>
+                </button>
 
-                <div class="login_text">¿Has olvidado tu Contraseña?</div>
-
+                <a class="login_text" href="">¿Has olvidado tu Contraseña?</a>
                 <div class="login_buttom">
-                    <div>Iniciar Sesión</div>
+                    <input type="submit" value="Iniciar Sesión">
                 </div>
-            </div>
+            </form>
             
             <div class="register_base">
                 <div>No tienes una cuenta?</div>
-                <div class="Register_buttom">Regístrate</div>
+                <a href="signup.html">Regístrate</a>
             </div>
         </div>
-        
-        <div class="footer">
+
+        <footer>
             <div class="info">
                 <div class="text_info">Contacto</div>
-
+    
                 <div class="part_info">
                     <img src="../image/phone.svg" alt="phone">
                     <div>+56 9 999 999</div>
                 </div>
-
+    
                 <div class="part_info">
                     <img src="../image/mail.svg" alt="mail">
-                    <div>mail@example.cl</div>
+                    <div>email@example.cl</div>
                 </div>
             </div>
-
+    
             <div class="logo_footer">
                 <img src="../image/dark_logo.svg" alt="dark_logo">
             </div>
-        </div>
+        </footer>
     </body>
 </html>
