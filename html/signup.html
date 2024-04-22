@@ -17,23 +17,45 @@
         <!-- Enlace al CDN de jQuery Validate -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 
+        <script src="../script/navbar.js"></script>
+        <link rel="stylesheet" href="../css/global.css"/>
+        <link rel="stylesheet" href="../css/index.css"/>
+
         <link rel="stylesheet" href="../css/signup.css">
         <script src="../script/signup.js"async></script>
     </head>
     <body>
 
 
-        <header> 
-            <div class="logo_header">
-                <img src="../image/logo.svg" alt="logo"> 
+        <header class="navbar">
+            <div class="navbar-logo-menu">
+              <div class="navbar-logo">
+                <div class="navbar-logo-image">
+                  <b class="navbar-logo-text">
+                    <span>Mente</span>
+                    <span class="navbar-logo-text-enlinea">EnLínea</span>
+                  </b>
+                  <img
+                    class="navbar-logo-image-icon"
+                    loading="lazy"
+                    alt=""
+                    src="../image/image.svg"
+                  />
+                </div>
+              </div>
+              <div class="navbar-menu-icon">
+                <div id="navbar-content" style="display: none;">
+                  <ul>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-menu-icon-1"></div>
+                <div class="navbar-menu-icon-2"></div>
+                <div class="navbar-menu-icon-3"></div>
+              </div>
             </div>
-
-            <button class="base_options">
-                <div class="rectangle_1"></div>
-                <div class="rectangle_1"></div>
-                <div class="rectangle_1"></div>
-            </button>
-        </header>
+          </header>
 
         <div class="center_page">
             <form id ="signup_form" class="login_base">
