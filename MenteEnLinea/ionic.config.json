@@ -1,7 +1,0 @@
-{
-  "name": "MenteEnLinea",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
