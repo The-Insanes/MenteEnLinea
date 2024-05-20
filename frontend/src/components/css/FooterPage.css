@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .info_footer_menu {
+    display: flex;
+    flex-direction: column;
     background: transparent;
-    
+    margin: 20px;
+
+    >.title_footer_menu {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+    }
+
     >.info_footer {
-        --background: transparent;
+        margin-top: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
     }
 }
 
 .footer_label {
     font-family: 'Open Sans',sans-serif;
-    font-size: 14px;
+    font-size: 25px;
 }

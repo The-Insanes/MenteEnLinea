@@ -1,5 +1,5 @@
 import './css/FooterPage.css';
-import { IonToolbar, IonItem, IonButton, IonImg, IonLabel, IonList, IonIcon } from '@ionic/react';
+import { IonToolbar, IonSegment, IonButton, IonImg, IonLabel, IonList, IonIcon } from '@ionic/react';
 import { mail, call } from 'ionicons/icons';
 
 interface ContainerProps {
@@ -9,17 +9,18 @@ interface ContainerProps {
 
 const FooterPage: React.FC<ContainerProps> = ({className, background}) => {
     return (
-        <IonToolbar className={className} color={background}>
-            <IonList className='info_footer_menu' lines="none" slot='start'>
-                <IonLabel className='footer_label'>Contacto</IonLabel>
-                <IonItem className='info_footer'>
-                    <IonLabel className='footer_label' color='light'>+56999999</IonLabel>
-                </IonItem>
-                <IonItem className='info_footer'>
-                    <IonIcon slot='start'></IonIcon>
-                    <IonLabel className='footer_label'>mail@example.cl</IonLabel>
-                </IonItem>
-            </IonList>
+        <IonToolbar color={background}>
+            <div className='info_footer_menu'>
+                <IonLabel className='title_footer_menu'>Contacto</IonLabel>
+                <IonLabel className='info_footer'>
+                    <IonIcon slot='start' icon={call}></IonIcon>
+                    +5699999999
+                </IonLabel>
+                <IonLabel className='info_footer'>
+                    <IonIcon slot='start' icon={mail}></IonIcon>
+                    mail@example.cl
+                </IonLabel>
+            </div>
             <IonImg src='images/dark_logo.svg' slot='end'></IonImg>
         </IonToolbar>
     );
