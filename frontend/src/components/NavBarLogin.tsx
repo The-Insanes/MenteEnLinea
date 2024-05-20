@@ -1,5 +1,5 @@
 import './css/NavBarLogin.css';
-import { IonMenu, IonImg, IonIcon, IonLabel, IonToolbar, IonMenuButton, IonButtons, IonTitle } from '@ionic/react';
+import { IonIcon, IonButton, IonImg, IonLabel, IonToolbar, IonMenuButton, IonButtons, IonTitle } from '@ionic/react';
 
 interface ContainerProps {
     className?: string | undefined
@@ -7,9 +7,14 @@ interface ContainerProps {
 
 const NavBarLogin: React.FC<ContainerProps> = ({className}) => {
     return (
-        <div className={className}>
-            
-        </div>
+        <IonToolbar className={className}>
+            <IonButton className='logo_button' fill='clear' slot='start'>
+                <IonImg src='images/logo.svg'></IonImg>
+            </IonButton>
+            <IonButtons slot="end">
+                <IonMenuButton className='option_button' autoHide={false} color='primary'></IonMenuButton>
+            </IonButtons>
+        </IonToolbar>
     );
 };
 
