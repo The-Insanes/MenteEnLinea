@@ -1,0 +1,7 @@
+.profile_presentation {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    background-image: url(wallpaper_profile.svg);
+    width: 100%;
+}
