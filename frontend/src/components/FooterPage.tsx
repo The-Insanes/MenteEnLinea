@@ -21,7 +21,7 @@ const FooterPage: React.FC<ContainerProps> = ({className, background}) => {
                     mail@example.cl
                 </IonLabel>
             </div>
-            <IonImg src='images/dark_logo.svg' slot='end'></IonImg>
+            <IonImg className='footer_dark_logo' src='images/dark_logo.svg' slot='end'></IonImg>
         </IonToolbar>
     );
 };

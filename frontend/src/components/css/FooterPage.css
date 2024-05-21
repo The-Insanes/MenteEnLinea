@@ -8,17 +8,26 @@
 
     >.title_footer_menu {
         font-family: 'Open Sans', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     >.info_footer {
         margin-top: 5px;
         font-family: 'Open Sans', sans-serif;
         font-size: 15px;
+
+        >ion-icon {
+            margin-right: 10px;
+        }
     }
 }
 
 .footer_label {
     font-family: 'Open Sans',sans-serif;
     font-size: 25px;
+}
+
+.footer_dark_logo {
+    margin: 20px;
+    width: 100px;
 }
