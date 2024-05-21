@@ -1,8 +1,8 @@
 .logo_button {
     --background: transparent;
-    width: 120px;
+    width: 150px;
 }
 
 .option_button {
-    font-size: 30px;  /* Ajusta este valor según tus necesidades */
+    font-size: 40px;  /* Ajusta este valor según tus necesidades */
 }
