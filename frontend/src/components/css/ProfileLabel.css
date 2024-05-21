@@ -1,0 +1,100 @@
+.elipse_1 {
+    position: relative;
+    width: 288.92px;
+    height: 100.71px;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-radius: 100px;
+    top: 200px;
+}
+
+.elipse_2 {
+    position: relative;
+    width: 319.14px;
+    height: 100px;
+    transform: rotate(-70.01deg);
+    background-color: rgba(247, 174, 248, 0.90);
+    border-radius: 80px;
+    right: 75px;
+} 
+
+.elipse_3 {
+    position: relative;
+    width: 319.14px;
+    height: 100px;
+    transform: rotate(-70.01deg);
+    background-color: rgba(79, 128, 255, 0.90);
+    border-radius: 80px;
+    bottom: 100px;
+    left: 20px;
+}
+
+.elipse_4 {
+    position: relative;
+    width: 319.14px;
+    height: 100px;
+    transform: rotate(-70.01deg);
+    background-color: rgba(247, 174, 248, 0.90);
+    border-radius: 80px;
+    bottom: 200px;
+    left: 118px
+} 
+
+.psychologist_photo {
+    position: relative;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 99px;
+    bottom: 350px;
+    left: 90px;
+}
+
+.puntation {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    bottom: 450px;
+    left: 210px;
+    width: 130px;
+}
+
+.price {
+    position: relative;
+    width: 135px;
+    bottom: 475px;
+    left: 190px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.method {
+    position: relative;
+    width: 165px;
+    bottom: 445px;
+    left: 50px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.psychologist_name {
+    position: relative;
+    bottom: 400px;
+    right: 200px;
+    font-style: italic;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.profile_info {
+    position: relative;
+    bottom: 370px;
+    right: 290px;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.label_container {
+    display: relative;
+    max-height: 300px;
+}
