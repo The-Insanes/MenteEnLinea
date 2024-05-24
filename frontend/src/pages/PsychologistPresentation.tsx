@@ -1,8 +1,9 @@
 import './css/PsychologistPresentation.css'
-import { IonPage, IonContent, IonHeader, IonFooter, IonImg } from "@ionic/react";
+import { IonPage, IonContent, IonHeader, IonFooter, IonImg, IonLabel } from "@ionic/react";
 import FooterPage from "../components/FooterPage";
 import NavBarLogin from "../components/NavBarLogin";
 import ProfileLabel from "../components/ProfileLabel";
+import CommentLabel from '../components/CommentLabel';
 
 const PychologistPage: React.FC = () => {
     return (
@@ -15,6 +16,9 @@ const PychologistPage: React.FC = () => {
                 <div className="profile_presentation">
                     <ProfileLabel price="XXXXX" method="Online" psychologist_name="Barbara"></ProfileLabel>
                 </div>
+
+                <CommentLabel></CommentLabel>
+                <IonLabel> Opiniones: </IonLabel>
             </IonContent>
 
             <IonFooter>
