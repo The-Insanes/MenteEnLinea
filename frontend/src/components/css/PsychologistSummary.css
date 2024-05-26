@@ -4,7 +4,7 @@
   position:relative;
   width: 100%;
   max-width: 500px;
-  height: 125px;
+  height: 145px;
   border-radius: 100px;
   background-color: rgba(217, 62, 231, 0.818);
   margin-top: 50px;
@@ -14,44 +14,64 @@
   overflow: hidden;
   align-items: center;
 }
+#DoctorImageContainer{
+  height: 100%;
+  max-height: 100px;
+  width: 100%;
+  max-width: 100px;
+  display: grid;
+  place-items: center;
+  border-radius: 150px;
+  overflow: hidden;
+
+}
+
+
+
 
 #leftSide{
   display: block;
   width: 40%; 
   max-width: 250px;    
-  height: 125px; 
-  background-color: #ebeef4;
+  height: 145px; 
+  background-color: #4F80FF;
   display: flex; 
-  
+  align-items: center;
+  justify-content: center;
+
 }
 
 
 #rightSide{
-  height: 125px;
+  height: 145px;
   display: block;
   width: 60%;
-  background-color: #053390;
+  background-color: #F7AEF8;
   max-width: 750px;
   border-left: 30px;
 
-  >.name{
-    color: black;
-    font-family: Open Sans;
-    font-style: italic;
-    word-wrap: break-word;
-    margin: 0;
-    font-size: 15px;
-  }
-  >.punctuation {
+
+  >#punctuation {
     position: relative;
     margin-top: 10px;
+    margin-left: 5px; 
   }
-  >.AreaResume{
+  >#name{
     color: black;
     font-family: Open Sans;
-    font-style: normal;
-    word-wrap: break-word;
-    margin: 0;
-    font-size: 13px;
+    font-size: 15px;
+    margin-left: 5px; 
+  }
+  >#AreaResume{
+    color: black;
+    font-family: Open Sans;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  >#Previsión{
+    color: black;
+    font-family: Open Sans;
+    margin-left: 5px;
+    font-size: 15px;
   }
 }
