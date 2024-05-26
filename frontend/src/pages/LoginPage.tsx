@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonToolbar, IonFooter } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonFooter } from '@ionic/react';
 import './css/LoginPage.css';
 import NavBarLogin from '../components/NavBarLogin';
 import Login from '../components/Login';
@@ -8,9 +8,7 @@ const LoginPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
           <NavBarLogin></NavBarLogin>
-        </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
