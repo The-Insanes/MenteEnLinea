@@ -1,5 +1,5 @@
 import './css/PsychologistPresentation.css'
-import { IonPage, IonContent, IonHeader, IonFooter, IonImg, IonLabel } from "@ionic/react";
+import { IonPage, IonContent, IonHeader, IonFooter, IonImg, IonLabel, IonButton } from "@ionic/react";
 import FooterPage from "../components/FooterPage";
 import NavBarLogin from "../components/NavBarLogin";
 import ProfileLabel from "../components/ProfileLabel";
@@ -11,7 +11,7 @@ const generateItems = () => {
 
     for(let i = 0; i < 50; i++) {
         comments.push({
-            labelName: `User ${i + 1}`,
+            labelName: `Usuario ${i + 1}`,
             labelInfo: 'Breve opinión del Psicologo'
         });
     }
@@ -20,7 +20,7 @@ const generateItems = () => {
 }
 
 const PychologistPage: React.FC = () => {
-    const comments = generateItems()
+    const comments = generateItems();
     
     return (
         <IonPage>
@@ -33,12 +33,14 @@ const PychologistPage: React.FC = () => {
                     <ProfileLabel price="XXXXX" method="Online" psychologist_name="Barbara"></ProfileLabel>
                 </div>
 
-                <CommentLabel labelName='Descripción' labelInfo='Breve descripción del psicologo'></CommentLabel>
-                <IonLabel>Opiniones: </IonLabel>
-                <CommentSection comments={comments}></CommentSection>
+                <CommentLabel className='description-profile' labelName='Descripción' labelInfo='Breve descripción del psicologo'></CommentLabel>
+                
+                <IonLabel className='opinion-label'>Opiniones: </IonLabel>
+                <CommentSection className='comment-section' comments={comments}></CommentSection>
+                <IonButton className='report-button' fill="clear">Reportar</IonButton>
             </IonContent>
 
-            <IonFooter>
+            <IonFooter slot='end'>
                 <FooterPage src_logo="dark_logo.svg" phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
             </IonFooter>
         </IonPage>
