@@ -1,0 +1,8 @@
+.searchFilterZone{
+    background-image: url(fondo_pag_principal_botones.webp);
+    background-color: aqua;
+    height: 500px;
+    width: 500px;
+    background-size:cover;
+    padding: 30px 0px;
+}
