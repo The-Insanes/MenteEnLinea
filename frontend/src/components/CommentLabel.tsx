@@ -1,5 +1,5 @@
 import './css/CommentLabel.css';
-import { IonLabel, IonTitle } from '@ionic/react';
+import { IonLabel } from '@ionic/react';
 
 interface ContainerProps {
     className?: string | undefined,

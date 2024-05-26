@@ -1,5 +1,5 @@
 import './css/PsychologistPresentation.css'
-import { IonPage, IonContent, IonHeader, IonFooter, IonImg, IonLabel, IonButton } from "@ionic/react";
+import { IonPage, IonContent, IonHeader, IonFooter, IonLabel, IonButton } from "@ionic/react";
 import FooterPage from "../components/FooterPage";
 import NavBarLogin from "../components/NavBarLogin";
 import ProfileLabel from "../components/ProfileLabel";

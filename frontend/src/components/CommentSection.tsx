@@ -5,10 +5,6 @@ import {
   IonInfiniteScroll,
   IonInfiniteScrollContent,
   IonList,
-  IonItem,
-  IonAvatar,
-  IonLabel,
-  IonToolbar,
 } from '@ionic/react';
 import CommentLabel from './CommentLabel';
 
