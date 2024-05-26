@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './css/Home.css';
+import './css/PsicologystSearchPage.css';
 import PsychologistSummary from '../components/PsychologistSummary';
 
 
@@ -13,6 +13,9 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <div className = 'searchFilterZone'>
+            
+        </div>
         <PsychologistSummary>
 
         </PsychologistSummary>
