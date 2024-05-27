@@ -1,8 +1,69 @@
+.completePage{
+    width: auto;
+    height: auto;
+    background-color: #130b75;
+    padding: 0px 10px 0px 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .searchFilterZone{
     background-image: url(fondo_pag_principal_botones.webp);
-    background-color: aqua;
-    height: 500px;
-    width: 500px;
+    display: block;
+    align-items: center;
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 1366px;
     background-size:cover;
-    padding: 30px 0px;
+    padding: 60px 0px 60px 0px ;
+    overflow: hidden;
+    
 }
+
+.custom-select{
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 4%;
+    
+    
+}
+
+.Location-select{
+    background-color: #F7AEF8;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 20px;
+    color: black;
+    border-color: aliceblue;
+}
+
+.Speciality-select{
+    background-color: #4F80FF;
+    color: black;
+    font-family: Open Sans;
+    font-size: 20px;
+    text-align: center;
+    border-color: aliceblue;
+}
+
+.searchResultsZone{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    height: 80%;
+    max-height: 1000px;
+    width: 100%;
+    padding: 20px 10px;
+    overflow: hidden;
+    
+
+}
+
