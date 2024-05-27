@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.info_footer_menu {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    margin: 20px;
+
+    >.title_footer_menu {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    >.info_footer {
+        margin-top: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+
+        >ion-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.footer_label {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 25px;
+}
+
+.footer_dark_logo {
+    margin: 20px;
+    width: 100px;
+}
