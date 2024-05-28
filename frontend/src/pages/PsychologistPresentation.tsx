@@ -1,7 +1,7 @@
 import './css/PsychologistPresentation.css'
 import { IonPage, IonContent, IonHeader, IonFooter, IonLabel, IonButton } from "@ionic/react";
 import FooterPage from "../components/FooterPage";
-import NavBarLogin from "../components/NavBarLogin";
+import NavBarLogin from "../components/NavBar";
 import ProfileLabel from "../components/ProfileLabel";
 import CommentLabel from '../components/CommentLabel';
 import CommentSection from '../components/CommentSection';

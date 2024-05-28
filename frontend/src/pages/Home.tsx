@@ -1,18 +1,22 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonToolbar, IonFooter } from '@ionic/react';
+import React, { useState } from 'react';
+import { IonContent, IonHeader, IonPage, IonToolbar, IonFooter, IonButton, IonModal } from '@ionic/react';
 import './css/Home.css';
-import NavBarLogin from '../components/NavBarLogin';
 import FooterPage from '../components/FooterPage';
+import Login from '../components/Login';
 
 const Home: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <NavBarLogin></NavBarLogin>
-        </IonToolbar>
-      </IonHeader>
-
       <IonContent>
         <div className='transparency'>
           <div className="content-area">
@@ -23,8 +27,8 @@ const Home: React.FC = () => {
               </h3>
               <h2 className="permtenos-acompaarte">Permítenos acompañarte</h2>
               <div className="reserve-now-button">
-                <button className="boton">
-                  <div className="reserva-ahora"><a href="busquedaPsicologo.html">Reserva ahora</a></div>
+                <button className="boton" onClick={openModal}>
+                  <div className="reserva-ahora">Reserva Ahora</div>
                 </button>
               </div>
             </div>
@@ -89,11 +93,16 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+        <FooterPage></FooterPage>
       </IonContent>
+      
+      <IonModal isOpen={showModal} onDidDismiss={closeModal}>
+        <IonContent>
+          <div className="close-button" onClick={closeModal}>×</div>
+          <Login className="modal-login" src_logo="logo.svg" />
+        </IonContent>
+      </IonModal>
 
-      <IonFooter translucent={true}>
-        <FooterPage src_logo='dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
-      </IonFooter>
     </IonPage>
   );
 };
