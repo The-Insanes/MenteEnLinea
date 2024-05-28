@@ -13,10 +13,10 @@ const paths = [
 const SignupPage: React.FC = () => {
     return(
     <IonPage>
-    <IonMenu contentId="main-content">
-                <IonHeader>
+    <IonMenu contentId="main-content" side='end'>
+                <IonHeader >
                 <IonToolbar>
-                    <IonTitle>Menu Content</IonTitle>
+                    <IonTitle>Mente en Linea</IonTitle>
                 </IonToolbar>
                 </IonHeader>
                 <IonContent>{paths.map((item,index) =>(
@@ -30,14 +30,14 @@ const SignupPage: React.FC = () => {
       </IonToolbar>
     </IonHeader>
 
-    <IonContent fullscreen>
+    <IonContent fullscreen h-full w-full>
       <div className='centered-content'>
-        <Signup src_logo='logo.svg'></Signup>
+        <Signup src_logo='public/Images/logo.svg'></Signup>
       </div>
     </IonContent>
 
     <IonFooter translucent={true}>
-      <FooterPage src_logo='dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
+      <FooterPage src_logo='public/Images/dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
     </IonFooter>
     </IonPage>
     );
