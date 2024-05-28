@@ -1,13 +1,15 @@
 import './css/CommentLabel.css';
-import { IonLabel, IonTitle } from '@ionic/react';
+import { IonLabel } from '@ionic/react';
 
 interface ContainerProps {
     className?: string | undefined,
     elipseColor?: string | undefined,
-    labelColor?: string |undefined
+    labelColor?: string | undefined
+    labelName?: string | undefined
+    labelInfo?: string | undefined
 };
 
-const CommentLabel: React.FC<ContainerProps> = ({className, elipseColor, labelColor}) => {
+const CommentLabel: React.FC<ContainerProps> = ({className, elipseColor, labelColor, labelName, labelInfo}) => {
     const elipseStyle = {
         backgroundColor: elipseColor,
     }
@@ -22,8 +24,8 @@ const CommentLabel: React.FC<ContainerProps> = ({className, elipseColor, labelCo
                 <div className="elipse-4" style={elipseStyle}></div>
 
                 <div className="description-container" style={labelStyle}>
-                    <h2>Descripción:</h2>
-                    <IonLabel>Breve descripción del psicologo</IonLabel>
+                    <h2>{labelName}</h2>
+                    <IonLabel>{labelInfo}</IonLabel>
                 </div>
             </div>
         </div>

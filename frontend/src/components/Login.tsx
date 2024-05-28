@@ -20,7 +20,7 @@ const Login: React.FC<ContainerProps> = ({className, src_logo}) => {
                 <Divider className='divider'></Divider>
 
                 <IonButton className='buttom_selection' color='light'>
-                    <IonIcon className='buttom_icon' src='images/google_logo.svg'></IonIcon>
+                    <IonIcon className='buttom_icon' src='google_logo.svg'></IonIcon>
                     <IonLabel className='buttom_label'>Google</IonLabel>
                 </IonButton>
 

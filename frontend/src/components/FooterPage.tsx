@@ -1,5 +1,5 @@
 import './css/FooterPage.css';
-import { IonToolbar, IonSegment, IonButton, IonImg, IonLabel, IonList, IonIcon } from '@ionic/react';
+import { IonToolbar, IonImg, IonLabel, IonIcon } from '@ionic/react';
 import { mail, call } from 'ionicons/icons';
 
 interface ContainerProps {

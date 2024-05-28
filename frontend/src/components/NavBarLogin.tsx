@@ -1,5 +1,5 @@
 import './css/NavBarLogin.css';
-import { IonIcon, IonButton, IonImg, IonLabel, IonToolbar, IonMenuButton, IonButtons, IonTitle } from '@ionic/react';
+import { IonButton, IonImg, IonToolbar, IonMenuButton, IonButtons } from '@ionic/react';
 
 interface ContainerProps {
     className?: string | undefined
