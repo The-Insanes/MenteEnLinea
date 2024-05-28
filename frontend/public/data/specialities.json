@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "specialtyName": "Psicología de la Salud"
+  },
+  {
+    "id": 2,
+    "specialtyName": "Psicología Social"
+  },
+  {
+    "id": 3,
+    "specialtyName": "Psicología Educativa"
+  },
+  {
+    "id": 4,
+    "specialtyName": "Psicología Forense"
+  },
+  {
+    "id": 5,
+    "specialtyName": "Neuropsicología"
+  },
+  {
+    "id": 6,
+    "specialtyName": "Psicología del Desarrollo"
+  },
+  {
+    "id": 7,
+    "specialtyName": "Psicología Clínica"
+  }
+]
