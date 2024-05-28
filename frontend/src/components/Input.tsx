@@ -7,17 +7,20 @@ interface ContainerProps {
     className?: string | undefined,
     label?: string | undefined,
     placeHolder?: string | undefined,
-    type?: TextFieldTypes | undefined
+    type?: TextFieldTypes | undefined,
+    name?: string |undefined,
+    value?: string |undefined,
     icon?: string | undefined,
-    ariaHidden?: boolean | undefined
+    ariaHidden?: boolean | undefined,
+    onIonChange: (e: any) => void;
 }
 
-const Input: React.FC<ContainerProps> = ({className, label, type, placeHolder, icon, ariaHidden}) => {
+const Input: React.FC<ContainerProps> = ({className, label, name, type, placeHolder, icon, ariaHidden, value, onIonChange}) => {
     if (type === 'password') {
         return (
             <div className= {className}>
                 <IonLabel className='label'>{label}</IonLabel>
-                <IonInput className='input' type='password' placeholder={placeHolder}>
+                <IonInput className='input' name={name} type='password' placeholder={placeHolder} value={value} onIonChange={onIonChange}>
                     <IonIcon className='left_icon' slot='start' icon={lockClosed} aria-hidden={ariaHidden}></IonIcon>
                     <IonButton fill='clear' slot='end' aria-label='Show/hide'>
                         <IonIcon slot='icon-only' color='dark' icon={eye} aria-hidden={ariaHidden}></IonIcon>
@@ -30,7 +33,7 @@ const Input: React.FC<ContainerProps> = ({className, label, type, placeHolder, i
     return (
         <div className= {className}>
             <IonLabel className='label'>{label}</IonLabel>
-            <IonInput className='input' type={type} placeholder={placeHolder}>
+            <IonInput className='input' type={type} name={name} placeholder={placeHolder} value={value} onIonChange={onIonChange}>
                 <IonIcon className='left_icon' slot='start' icon={icon} aria-hidden={ariaHidden}></IonIcon>
             </IonInput>
         </div>
