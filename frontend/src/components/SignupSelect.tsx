@@ -9,18 +9,23 @@ import Signup from './Signup';
 interface ContainerProps {
     className?: string | undefined,
     label?: string | undefined,
+    name?:string|undefined,
     placeHolder?: string | undefined,
+    value?: string | undefined,
     icon?: string | undefined,
-}
+    onIonChange: (e: any) => void,
+};
 const regiones = [
 
 ]
 
-const SignupSelect: React.FC<ContainerProps> = ({className, label, placeHolder, icon}) => {
+const SignupSelect: React.FC<ContainerProps> = ({className, label, name, placeHolder, icon, value, onIonChange}) => {
     return (
         <div className= {className}>
             <IonLabel className='label'>{label}</IonLabel>
-            <IonSelect className='input' placeholder={placeHolder}>
+            <IonSelect className='input' name={name} placeholder={placeHolder}
+            value={value}
+            onIonChange={onIonChange}>
                     <IonSelectOption value='15'>Región de Arica y Parinacota</IonSelectOption>
                     <IonSelectOption value='1'>Región de Tarapacá</IonSelectOption>
                     <IonSelectOption value='2'>Región de Antofagasta</IonSelectOption>
