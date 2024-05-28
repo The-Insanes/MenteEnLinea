@@ -1,18 +1,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></link>
 /* Imports */
 import { 
-  IonContent, 
-  IonHeader, 
-  IonTitle, 
-  IonToolbar, 
-  IonItem, 
-  IonList, 
-  IonSelect, 
+  IonContent,
+  IonSelect,
   IonSelectOption,
-  IonApp, 
-  IonInfiniteScroll,
-  IonInfiniteScrollContent,
-  IonFooter
+  IonFooter,
+  IonPage
 } from '@ionic/react';
 import React, {useState, useEffect} from 'react';
 
@@ -22,16 +15,19 @@ import './css/PsicologystSearchPage.css';
 import NavBarLogin from '../components/NavBarLogin';
 import PsychologistSummary from '../components/PsychologistSummary';
 import FooterPage from '../components/FooterPage';
+import { text } from 'ionicons/icons';
+import PsychologistList from '../components/PsychologistList';
 
-/* Interface */
+/* Interfaces */
 
 interface Psycologist {
   id: number
-  ProfilePhoto: string,
-  punctuation: string
+  ProfilePhoto: string;
+  punctuation: string;
   name: string;
-  area: string;
+  specialty: number;
   prevision: string;
+  location: number;
 }
 
 interface Location {
@@ -41,40 +37,76 @@ interface Location {
 
 interface Specialty {
   specialtyName: string;
+  id: number;
 }
 
-const PAGE_SIZE = 5; // n° de Psicologos por carga
-
-/* Page Design , Psycologist.name, Psycologist.area, Psycologist.prevision */
-const PsicologystSearchPage: React.FC<Psycologist> = () => {
+const PsicologystSearchPage: React.FC = () => {
   const [locations, setLocations] = useState<Location[]>([]);
   const [specialties, setSpecialties] = useState<Specialty[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState<string | undefined>(undefined);
-  const [selectedSpecialty, setSelectedSpecialty] = useState<string | undefined>(undefined);
+  const [selectedLocation, setSelectedLocation] = useState<number | undefined>(undefined);
+  const [selectedSpecialty, setSelectedSpecialty] = useState<number | undefined>(undefined);
+  const [filteredPsycologists, setFilteredPsycologists] = useState<Psycologist[]>([]);
+  const [hasMore, setHasMore] = useState<boolean>(true);
+  const [displayedPsycologists, setDisplayedPsycologists] = useState<Psycologist[]>([]);
 
   useEffect(() => {
     // Fetch locations
-    fetch('http://localhost:3001/locations')
+    fetch('data/locations.json')
       .then(response => response.json())
-      .then(data => setLocations(data));
+      .then(data => setLocations(data.locations)
+    );
+      
 
     // Fetch specialties
-    fetch('http://localhost:3001/specialties')
+    fetch('data/specialities.json')
       .then(response => response.json())
-      .then(data => setSpecialties(data));
-  }, []);
+      .then(data => setSpecialties(data)
+    );
+  
+    }, []);
+    
+    useEffect(() => {
+  if (selectedLocation !== undefined && selectedSpecialty !== undefined) {
+    fetch('data/psycologists.json')
+      .then(response => response.json())
+      .then((data: Psycologist[]) => {
+        console.log('Data:', data);
+        console.log('Selected Location ID:', selectedLocation);
+        console.log('Selected Specialty ID:', selectedSpecialty);
 
+        //Filtrado por ubicación
+        const locationFiltered = data.filter((p: Psycologist) =>
+          p.location === selectedLocation
+        );
+        console.log(locationFiltered);
 
+        // Filtrado por especialidad
+        const specialtyFiltered = locationFiltered.filter((p: Psycologist) =>
+          p.specialty === selectedSpecialty
+        );
+        console.log(specialtyFiltered);
 
+        
+      })
+      .catch(error => {
+        console.error("Error fetching psycologists:", error);
+      });
+  }
+}, [selectedLocation, selectedSpecialty]);
 
+  
+
+  
   return (
-    <IonApp>
+    <IonPage>
       
       <NavBarLogin></NavBarLogin>
+
       <IonContent fullscreen>
         <div className="completePage">
           <div className = 'searchFilterZone'>
             <div className="filter-container">
+
               <IonSelect
                 className="custom-select Location-select"
                 value={selectedLocation}
@@ -82,10 +114,10 @@ const PsicologystSearchPage: React.FC<Psycologist> = () => {
                 onIonChange={e => setSelectedLocation(e.detail.value)}
               >
                 {locations.map(location => (
-                  <IonSelectOption key={location.id} value={location.location}>
+                  <IonSelectOption key={location.id} value={location.id}>
                     {location.location}
                   </IonSelectOption>
-                ))}
+              ))}
               </IonSelect>
 
               <IonSelect
@@ -95,26 +127,27 @@ const PsicologystSearchPage: React.FC<Psycologist> = () => {
                 onIonChange={e => setSelectedSpecialty(e.detail.value)}
               >
                 {specialties.map(specialty => (
-                <IonSelectOption key={specialty.specialtyName} value={specialty.specialtyName}>
+                <IonSelectOption key={specialty.id} value={specialty.id}>
                   {specialty.specialtyName}
                 </IonSelectOption>
               ))}
               </IonSelect>
             </div>
           </div>
-
-          <div className='searchResultsZone'>
-            <PsychologistSummary></PsychologistSummary>
-            <PsychologistSummary></PsychologistSummary>
-            <PsychologistSummary></PsychologistSummary>
+         
+          <div className="searchResultsZone">
+            {displayedPsycologists.length > 0 ? (
+              <PsychologistList psycologists={displayedPsycologists} /> ) : (
+              <h3>No se encontraron psicólogos con los criterios seleccionados.</h3>
+            )}
           </div>
-
         </div>
       </IonContent>
+
       <IonFooter translucent={true}>
-        <FooterPage src_logo='dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
+        <FooterPage src_logo='images/dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
       </IonFooter>
-    </IonApp>
+    </IonPage>
   );
 };
 

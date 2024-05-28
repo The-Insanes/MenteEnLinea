@@ -2,7 +2,7 @@
     width: auto;
     height: auto;
     background-color: #130b75;
-    padding: 0px 10px 0px 10px;
+    padding: 0;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -10,13 +10,15 @@
 }
 
 .searchFilterZone{
-    background-image: url(fondo_pag_principal_botones.webp);
-    display: block;
+    background-image: url(images/fondo_pag_principal_botones.webp);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    vertical-align: middle;
     height: 100%;
     max-height: 400px;
     width: 100%;
-    max-width: 1366px;
+    max-width: 100%;
     background-size:cover;
     padding: 60px 0px 60px 0px ;
     overflow: hidden;
@@ -27,10 +29,9 @@
     border-radius: 50px;
     border-style: solid;
     border-width: 2px;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     text-align: center;
-    margin: 4%;
+    margin: 4px;
     
     
 }
@@ -42,6 +43,7 @@
     font-size: 20px;
     color: black;
     border-color: aliceblue;
+
 }
 
 .Speciality-select{
@@ -58,12 +60,14 @@
     align-items: center;
     flex-direction: column;
     background-color: #ffff;
-    height: 80%;
-    max-height: 1000px;
+    height: 100%;
     width: 100%;
     padding: 20px 10px;
     overflow: hidden;
     
-
+}
+.filter-container{
+    width: 80%;
+    
 }
 
