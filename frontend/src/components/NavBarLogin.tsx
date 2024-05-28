@@ -12,7 +12,7 @@ const NavBarLogin: React.FC<ContainerProps> = ({className}) => {
         
         <IonToolbar className={className}>
             <IonButton className='logo_button' fill='clear' slot='start'>
-                <IonImg src='logo.svg'></IonImg>
+                <IonImg src='Images/logo.svg'></IonImg>
             </IonButton>
                  
                 <IonButtons  id='main-content'slot="end">
