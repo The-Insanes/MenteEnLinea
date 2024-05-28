@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .login_base {
+    margin-top: auto;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +14,7 @@
     min-width: 300px;
     max-width: 350px;
 }
+
 
 .divider {
     display: inline-flex;
