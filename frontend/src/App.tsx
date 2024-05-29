@@ -36,6 +36,8 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import FooterPage from './components/FooterPage';
 import NavBar from './components/NavBar';
+import Signup from './components/Signup';
+import SignupPage from './pages/SignupPage';
 
 setupIonicReact();
 
@@ -52,6 +54,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
+          </Route>
+          <Route exact path="/SignupPage">
+            <SignupPage />
           </Route>
         </IonRouterOutlet>
     </IonReactRouter>
