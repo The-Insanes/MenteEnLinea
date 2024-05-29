@@ -58,6 +58,9 @@ const App: React.FC = () => (
           <Route exact path="/SignupPage">
             <SignupPage />
           </Route>
+          <Route exact path="/si">
+            <PychologistPage idPsychologist={2}/>
+          </Route>
         </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
