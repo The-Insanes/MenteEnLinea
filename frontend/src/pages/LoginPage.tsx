@@ -93,12 +93,12 @@ const LoginPage: React.FC = () => {
       {flag && 
         <Redirect to='/PsicologystSearchPage'></Redirect>
       }
-      <IonContent fullscreen>
+      <IonContent className='fondo'>
         <div className='centered-content'>
           <Login verifyEmail={validateEmailName} verifyPassword={validatePassword} onClick={clickButton}></Login>
         </div>
-        <FooterPage></FooterPage>
       </IonContent>
+      <FooterPage></FooterPage>
     </IonPage>
   );
 };
