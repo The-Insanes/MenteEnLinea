@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/PsychologistSummary.css';
-import { IonAvatar, IonImg } from '@ionic/react';
+import { IonAvatar, IonButton, IonImg } from '@ionic/react';
 
 interface Psycologist {
-    id: number
+    id: number;
     ProfilePhoto: string;
     punctuation: string;
     name: string;
@@ -15,11 +15,12 @@ interface Psycologist {
 interface Props {
     className?: string;
     psycologist?: Psycologist;
+    onClick?: (id: number | undefined) => void;
 }
 
-const PsychologistSummary: React.FC<Props> = ({className, psycologist}) => { 
+const PsychologistSummary: React.FC<Props> = ({className, psycologist, onClick}) => { 
     return (
-        <div id = 'pill'>
+        <IonButton id = 'pill' fill='clear' onClick={() => {onClick!(psycologist?.id)}}>
             <div id = 'leftSide'>
                 <IonAvatar className='DoctorImageContainer'>
                     <IonImg src={`images/${psycologist?.ProfilePhoto}`}></IonImg>
@@ -39,7 +40,7 @@ const PsychologistSummary: React.FC<Props> = ({className, psycologist}) => {
 
             </div>
 
-        </div>
+        </IonButton>
     );
 
 };

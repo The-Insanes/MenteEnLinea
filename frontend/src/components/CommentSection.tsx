@@ -49,7 +49,7 @@ const CommentSection: React.FC<ContainerProps> = ({ className, comments }) => {
           <IonContent>
               <IonList>
                   {items.map((item, index) => (
-                  <CommentLabel
+                  <CommentLabel key={index}
                       labelName={item.labelName}
                       labelInfo={item.labelInfo}
                       labelColor={index % 2 === 0 ? '#4F80FF' : '#F7AEF8'}

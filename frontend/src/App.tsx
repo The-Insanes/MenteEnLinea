@@ -38,6 +38,7 @@ import FooterPage from './components/FooterPage';
 import NavBar from './components/NavBar';
 import Signup from './components/Signup';
 import SignupPage from './pages/SignupPage';
+import PsicologystSearchPage from './pages/PsicologystSearchPage';
 
 setupIonicReact();
 
@@ -58,8 +59,11 @@ const App: React.FC = () => (
           <Route exact path="/SignupPage">
             <SignupPage />
           </Route>
-          <Route exact path="/si">
-            <PychologistPage idPsychologist={2}/>
+          <Route exact path="/PsychologistPage">
+            <PychologistPage />
+          </Route>
+          <Route exact path="/PsicologystSearchPage">
+            <PsicologystSearchPage />
           </Route>
         </IonRouterOutlet>
     </IonReactRouter>

@@ -6,6 +6,7 @@ import ProfileLabel from "../components/ProfileLabel";
 import CommentLabel from '../components/CommentLabel';
 import CommentSection from '../components/CommentSection';
 import NavBar from '../components/NavBar';
+import { useLocation } from 'react-router-dom';
 
 const generateItems = () => {
     const comments = []
@@ -34,34 +35,31 @@ interface Psychologist {
     price: number
 }
 
-interface ContainerProps {
-    idPsychologist?: number
-}
+interface LocationState {
+    data: number;
+  }
 
-const PychologistPage: React.FC<ContainerProps> = (props) => {
+const PychologistPage: React.FC = () => {
     const [psychologist, setPsychologist] = useState<Psychologist>();
+    const location = useLocation<LocationState>();
+    const idPsychologist = location.state.data;
     const comments = generateItems();
-
+    
     useEffect(() => {
         fetch('data/psychologists.json')
         .then(response => response.json())
         .then((data: Psychologist[]) => {
             for(let i = 0; i < data.length; i++) {
-                if(data[i].id == props.idPsychologist) {
+                if(data[i].id == idPsychologist) {
                     setPsychologist(data[i]);
                 }
             }
         });
     }, []);
     
-    console.log(psychologist)
     return (
         <IonPage>
-            <IonHeader>
-                <NavBar></NavBar>
-            </IonHeader>
-
-            <IonContent>
+            <IonContent className='psychologist-presentation'>
                 <div className="profile_presentation">
                     <ProfileLabel price={psychologist?.price} 
                     method={psychologist?.modality} 

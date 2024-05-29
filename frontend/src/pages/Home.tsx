@@ -13,6 +13,7 @@ interface User {
 
 const Home: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
+  const [flag, setFlag] = useState<boolean>(false);
   
   const openModal = () => {
     setShowModal(true);
@@ -85,11 +86,8 @@ const Home: React.FC = () => {
   }
 
   const clickButton = () => {
-    console.log(user.email)
-    console.log(user.password)
-    
     if ((user.name !== undefined || user.email !== undefined) && user.password !== undefined) {
-      
+      setFlag(true);
     }
   }
 
@@ -102,6 +100,9 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
+      {flag && 
+        <Redirect to='/PsicologystSearchPage'></Redirect>
+      }
       <IonContent>
         <div className='transparency'>
           <div className="content-area">

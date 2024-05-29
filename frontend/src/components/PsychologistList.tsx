@@ -5,6 +5,7 @@ import './css/PsychologistList.css'
 
 interface Props {
   psycologists: Psycologist[];
+  onClick?: (id: number | undefined) => void;
 }
 interface Psycologist {
     id: number
@@ -14,17 +15,17 @@ interface Psycologist {
     specialty: number;
     prevision: string;
     location: number;
-  }
+}
 
 
-const PsychologistList: React.FC<Props> = ({ psycologists }) => {
+const PsychologistList: React.FC<Props> = ({ psycologists, onClick}) => {
   
     return (
       <IonContent className='contenedorListaPills'>
         <IonList className='listaPills'>
           {psycologists.map(psycologist => (
             <IonItem key={psycologist.id}>
-              <PsychologistSummary psycologist={psycologist} />
+              <PsychologistSummary psycologist={psycologist} onClick={onClick}/>
             </IonItem>
           ))}
         </IonList>

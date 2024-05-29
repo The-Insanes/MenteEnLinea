@@ -17,6 +17,9 @@ import PsychologistSummary from '../components/PsychologistSummary';
 import FooterPage from '../components/FooterPage';
 import { text } from 'ionicons/icons';
 import PsychologistList from '../components/PsychologistList';
+import { Redirect, Route } from 'react-router';
+import PychologistPage from './PsychologistPresentation';
+import { Link } from 'react-router-dom';
 
 /* Interfaces */
 
@@ -48,6 +51,13 @@ const PsicologystSearchPage: React.FC = () => {
   const [filteredPsycologists, setFilteredPsycologists] = useState<Psycologist[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [displayedPsycologists, setDisplayedPsycologists] = useState<Psycologist[]>([]);
+  const [onClickPill, setOnClickPill] = useState<number>(-1);
+
+  const clickOnPill = (id: number | undefined) => {
+    if(id !== undefined) {
+      setOnClickPill(id);
+    }
+  }
 
   useEffect(() => {
     // Fetch locations
@@ -65,44 +75,36 @@ const PsicologystSearchPage: React.FC = () => {
   
     }, []);
     
-    useEffect(() => {
-  if (selectedLocation !== undefined && selectedSpecialty !== undefined) {
-    fetch('data/psycologists.json')
-      .then(response => response.json())
-      .then((data: Psycologist[]) => {
-        console.log('Data:', data);
-        console.log('Selected Location ID:', selectedLocation);
-        console.log('Selected Specialty ID:', selectedSpecialty);
+  useEffect(() => {
+    if (selectedLocation !== undefined && selectedSpecialty !== undefined) {
+      fetch('data/psycologists.json')
+        .then(response => response.json())
+        .then((data: Psycologist[]) => {
+          //Filtrado por ubicación
+          const locationFiltered = data.filter((p: Psycologist) =>
+            p.location === selectedLocation
+          );
 
-        //Filtrado por ubicación
-        const locationFiltered = data.filter((p: Psycologist) =>
-          p.location === selectedLocation
-        );
-        console.log(locationFiltered);
-
-        // Filtrado por especialidad
-        const specialtyFiltered = locationFiltered.filter((p: Psycologist) =>
-          p.specialty === selectedSpecialty
-        );
-        setFilteredPsycologists(specialtyFiltered);
-        console.log(specialtyFiltered);
-        
-      })
-      .catch(error => {
-        console.error("Error fetching psycologists:", error);
-      });
-  }
-}, [selectedLocation, selectedSpecialty]);
-
-    
-
+          // Filtrado por especialidad
+          const specialtyFiltered = locationFiltered.filter((p: Psycologist) =>
+            p.specialty === selectedSpecialty
+          );
+          setFilteredPsycologists(specialtyFiltered);
+          
+        })
+        .catch(error => {
+          console.error("Error fetching psycologists:", error);
+        });
+    }
+  }, [selectedLocation, selectedSpecialty]);
   
   return (
     <IonPage>
-      
-      <NavBarLogin></NavBarLogin>
+      {onClickPill != -1 &&
+        <Redirect to={{pathname: '/PsychologistPage', state: {data: onClickPill}}}></Redirect>
+      }
 
-      <IonContent fullscreen>
+      <IonContent className='psychologist-search' fullscreen>
         <div className="completePage">
           <div className = 'searchFilterZone'>
             <div className="filter-container">
@@ -137,7 +139,7 @@ const PsicologystSearchPage: React.FC = () => {
           
           <div className="searchResultZone">
             {filteredPsycologists.length > 0 ? (
-              <PsychologistList psycologists={filteredPsycologists} />
+              <PsychologistList psycologists={filteredPsycologists} onClick={clickOnPill}/>
             ) : (
               <h3>No se encontraron psicólogos con los criterios seleccionados.</h3>
             )}

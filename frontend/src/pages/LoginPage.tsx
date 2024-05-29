@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './css/LoginPage.css';
 import Login from '../components/Login';
 import FooterPage from '../components/FooterPage';
+import { Redirect } from 'react-router';
 
 interface User {
   email: string | undefined,
@@ -13,6 +14,7 @@ interface User {
 const LoginPage: React.FC = () => {
   const [users, setUsers] = useState<User[]>([])
   const [user, setUser] = useState<User>({email: undefined, name: undefined, password: undefined})
+  const [flag, setFlag] = useState<boolean>(false);
 
   const findPassword = (password: string) => {
     if(user.name === undefined && user.email === undefined) return true;
@@ -76,7 +78,7 @@ const LoginPage: React.FC = () => {
 
   const clickButton = () => {
     if ((user.name !== undefined || user.email !== undefined) && user.password !== undefined) {
-
+      setFlag(true);
     }
   }
 
@@ -88,6 +90,9 @@ const LoginPage: React.FC = () => {
 
   return (
     <IonPage>
+      {flag && 
+        <Redirect to='/PsicologystSearchPage'></Redirect>
+      }
       <IonContent fullscreen>
         <div className='centered-content'>
           <Login verifyEmail={validateEmailName} verifyPassword={validatePassword} onClick={clickButton}></Login>
