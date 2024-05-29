@@ -20,3 +20,9 @@
 .left_icon {
     padding-left: 12px;
 }
+
+.error-msg {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: normal;
+}

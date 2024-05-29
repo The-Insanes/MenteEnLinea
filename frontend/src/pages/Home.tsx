@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { IonContent, IonHeader, IonPage, IonToolbar, IonFooter, IonButton, IonModal } from '@ionic/react';
 import './css/Home.css';
 import FooterPage from '../components/FooterPage';
 import Login from '../components/Login';
+import { Redirect } from 'react-router';
+
+interface User {
+  email: string | undefined,
+  name: string | undefined,
+  password: string | undefined
+}
 
 const Home: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
-
+  
   const openModal = () => {
     setShowModal(true);
   };
@@ -14,6 +21,84 @@ const Home: React.FC = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+
+  const [users, setUsers] = useState<User[]>([])
+  const [user, setUser] = useState<User>({email: undefined, name: undefined, password: undefined})
+  const findPassword = (password: string) => {
+    if(user.name === undefined && user.email === undefined) return true;
+
+    for(let i = 0; i < users.length; i++) {
+      if(password === users[i].password && (user.name === users[i].name || user.email === users[i].email)) {
+        setUser({email: user.email, name: user.name, password: password});
+        return true;
+      }
+    }
+
+    setUser({email: user.email, name: user.name, password: undefined});
+    return false;
+  }
+
+  const findEmailName = (emailName: string) => {
+    for(let i = 0; i < users.length; i++) {
+      if(emailName === users[i].name || emailName === users[i].email) {
+        if(emailName === users[i].name) setUser({email: undefined, name: emailName, password: user.password});
+        if(emailName === users[i].email) setUser({email: emailName, name: undefined, password: user.password});
+
+        return true;
+      }
+    }
+
+    setUser({email: undefined, name: undefined, password: user.password});
+    return false;
+  }
+
+  const validatePassword = (password: string) => {
+    const minLength = /.{6,}/;
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+    const hasLetter = /[a-zA-Z]/;
+    const hasNumber = /\d/;
+    const flag = findPassword(password);
+
+    if ((minLength.test(password) &&
+        hasSpecialChar.test(password) &&
+        hasLetter.test(password) &&
+        hasNumber.test(password)) && 
+        flag || 
+        password === '') {
+        
+        return undefined;
+    }
+    
+    if(!flag) return 'La contraseña es incorrecta'
+    
+    return 'La contraseña debe tener como mínimo 6 caracteres, un caracter especial, una letra y un número';
+  }
+  
+  const validateEmailName = (email: string) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if(re.test(String(email).toLowerCase()) || findEmailName(email) || email === '') {
+          return undefined;
+      }
+  
+      return 'Correo o usuario ingresado es invalido o no existe';
+  }
+
+  const clickButton = () => {
+    console.log(user.email)
+    console.log(user.password)
+    
+    if ((user.name !== undefined || user.email !== undefined) && user.password !== undefined) {
+      
+    }
+  }
+
+  useEffect(() => {
+    fetch('data/users.json')
+    .then(response => response.json())
+    .then(data => setUsers(data))
+  }, []);
+  
 
   return (
     <IonPage>
@@ -99,7 +184,7 @@ const Home: React.FC = () => {
       <IonModal isOpen={showModal} onDidDismiss={closeModal}>
         <IonContent>
           <div className="close-button" onClick={closeModal}>×</div>
-          <Login className="modal-login" src_logo="logo.svg" />
+            <Login verifyEmail={validateEmailName} verifyPassword={validatePassword} onClick={clickButton}></Login>
         </IonContent>
       </IonModal>
 

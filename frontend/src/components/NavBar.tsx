@@ -12,7 +12,7 @@ const NavBar: React.FC<NavbarProps> = ({className}) => {
             <IonToolbar className={className}>
                 <Link to='/Home'>
                 <IonButton className='logo_button' fill='clear' slot='start'>
-                    <IonImg src='logo.svg'></IonImg>
+                    <IonImg src='./images/logo.svg'></IonImg>
                 </IonButton>
                 </Link>
                 <IonButtons slot="end">

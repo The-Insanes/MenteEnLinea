@@ -13,7 +13,7 @@ interface ContainerProps {
 const FooterPage: React.FC<ContainerProps> = ({className, background, email, phone_number, src_logo}) => {
     return (
         <IonFooter translucent={true}>
-            <IonToolbar className={ src_logo='dark_logo.svg'} color={'primary'}>
+            <IonToolbar className={ src_logo='./images/dark_logo.svg'} color={'primary'}>
                 <div className='info_footer_menu'>
                     <IonLabel className='title_footer_menu'>Contacto</IonLabel>
                     <IonLabel className='info_footer'>

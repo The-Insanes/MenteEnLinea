@@ -1,0 +1,267 @@
+[
+    {
+        "name": "Alice Smith",
+        "password": "Passw0rd!",
+        "email": "alice@example.com"
+    },
+    {
+        "name": "Bob Johnson",
+        "password": "B0b@1234",
+        "email": "bob@example.com"
+    },
+    {
+        "name": "Charlie Williams",
+        "password": "Ch@rli3W",
+        "email": "charlie@example.com"
+    },
+    {
+        "name": "David Brown",
+        "password": "D@vidB123",
+        "email": "david@example.com"
+    },
+    {
+        "name": "Emma Jones",
+        "password": "Emm@1234",
+        "email": "emma@example.com"
+    },
+    {
+        "name": "Frank Miller",
+        "password": "Fr@nkM6",
+        "email": "frank@example.com"
+    },
+    {
+        "name": "Grace Wilson",
+        "password": "Gr@c3W1",
+        "email": "grace@example.com"
+    },
+    {
+        "name": "Henry Moore",
+        "password": "H3nryM!",
+        "email": "henry@example.com"
+    },
+    {
+        "name": "Ivy Taylor",
+        "password": "Iv@Tayl0r",
+        "email": "ivy@example.com"
+    },
+    {
+        "name": "Jack Anderson",
+        "password": "J@ckAnd1",
+        "email": "jack@example.com"
+    },
+    {
+        "name": "Kara Thomas",
+        "password": "K@r@Th1",
+        "email": "kara@example.com"
+    },
+    {
+        "name": "Liam Jackson",
+        "password": "Li@mj4ck",
+        "email": "liam@example.com"
+    },
+    {
+        "name": "Mia White",
+        "password": "Mi@Whit3",
+        "email": "mia@example.com"
+    },
+    {
+        "name": "Noah Harris",
+        "password": "N0ahH@r1",
+        "email": "noah@example.com"
+    },
+    {
+        "name": "Olivia Martin",
+        "password": "0liv@M1",
+        "email": "olivia@example.com"
+    },
+    {
+        "name": "Paul Thompson",
+        "password": "P@ulT123",
+        "email": "paul@example.com"
+    },
+    {
+        "name": "Quinn Garcia",
+        "password": "Q@nnG4r",
+        "email": "quinn@example.com"
+    },
+    {
+        "name": "Rita Martinez",
+        "password": "R1taM@r",
+        "email": "rita@example.com"
+    },
+    {
+        "name": "Sam Robinson",
+        "password": "S@mRob1",
+        "email": "sam@example.com"
+    },
+    {
+        "name": "Tina Clark",
+        "password": "T1n@Cl4r",
+        "email": "tina@example.com"
+    },
+    {
+        "name": "Uma Rodriguez",
+        "password": "Um@R0d",
+        "email": "uma@example.com"
+    },
+    {
+        "name": "Victor Lewis",
+        "password": "V1ct0rL@",
+        "email": "victor@example.com"
+    },
+    {
+        "name": "Wendy Lee",
+        "password": "W3ndyL@e",
+        "email": "wendy@example.com"
+    },
+    {
+        "name": "Xander Walker",
+        "password": "X@nd3rW",
+        "email": "xander@example.com"
+    },
+    {
+        "name": "Yara Hall",
+        "password": "Y@r@H123",
+        "email": "yara@example.com"
+    },
+    {
+        "name": "Zack Young",
+        "password": "Z@ckY0",
+        "email": "zack@example.com"
+    },
+    {
+        "name": "Adam King",
+        "password": "Ad@mK1ng",
+        "email": "adam@example.com"
+    },
+    {
+        "name": "Bella Scott",
+        "password": "B3ll@S1",
+        "email": "bella@example.com"
+    },
+    {
+        "name": "Cody Green",
+        "password": "C0dyG@",
+        "email": "cody@example.com"
+    },
+    {
+        "name": "Diana Adams",
+        "password": "D1an@Ad",
+        "email": "diana@example.com"
+    },
+    {
+        "name": "Evan Baker",
+        "password": "Ev@nB@k3",
+        "email": "evan@example.com"
+    },
+    {
+        "name": "Fiona Hill",
+        "password": "Fi0n@H!",
+        "email": "fiona@example.com"
+    },
+    {
+        "name": "George Nelson",
+        "password": "G30rgeN!",
+        "email": "george@example.com"
+    },
+    {
+        "name": "Holly Carter",
+        "password": "H0llyC@r",
+        "email": "holly@example.com"
+    },
+    {
+        "name": "Ian Mitchell",
+        "password": "I@nM1tch",
+        "email": "ian@example.com"
+    },
+    {
+        "name": "Judy Perez",
+        "password": "JudyP@r3",
+        "email": "judy@example.com"
+    },
+    {
+        "name": "Kyle Roberts",
+        "password": "Ky1eR@b",
+        "email": "kyle@example.com"
+    },
+    {
+        "name": "Laura Turner",
+        "password": "L@uraT12",
+        "email": "laura@example.com"
+    },
+    {
+        "name": "Mike Phillips",
+        "password": "Mik3P@ll",
+        "email": "mike@example.com"
+    },
+    {
+        "name": "Nina Campbell",
+        "password": "N1n@C@mp",
+        "email": "nina@example.com"
+    },
+    {
+        "name": "Oscar Parker",
+        "password": "0scarP@r",
+        "email": "oscar@example.com"
+    },
+    {
+        "name": "Pamela Evans",
+        "password": "Pam@Ev@",
+        "email": "pamela@example.com"
+    },
+    {
+        "name": "Quincy Edwards",
+        "password": "Q1nc@Edw",
+        "email": "quincy@example.com"
+    },
+    {
+        "name": "Rose Collins",
+        "password": "R0seC@ll",
+        "email": "rose@example.com"
+    },
+    {
+        "name": "Steve Stewart",
+        "password": "St3veS@",
+        "email": "steve@example.com"
+    },
+    {
+        "name": "Tara Morris",
+        "password": "T@r@M0r",
+        "email": "tara@example.com"
+    },
+    {
+        "name": "Ulysses Bell",
+        "password": "Ulyss@B3",
+        "email": "ulysses@example.com"
+    },
+    {
+        "name": "Vera Cooper",
+        "password": "V3raC@p",
+        "email": "vera@example.com"
+    },
+    {
+        "name": "Walt Sanchez",
+        "password": "W@ltS4n",
+        "email": "walt@example.com"
+    },
+    {
+        "name": "Xena Reed",
+        "password": "Xen@R33",
+        "email": "xena@example.com"
+    },
+    {
+        "name": "Yvonne Ward",
+        "password": "Yv0nn@W",
+        "email": "yvonne@example.com"
+    },
+    {
+        "name": "Zane Torres",
+        "password": "Z@neT0r",
+        "email": "zane@example.com"
+    },
+    {
+        "name": "Ariel Fisher",
+        "password": "Ar!elF1",
+        "email": "ariel@example.com"
+    }
+]
