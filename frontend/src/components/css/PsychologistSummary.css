@@ -23,6 +23,7 @@
   max-width: 200px;
   max-height: 200px;
   width: 80%;
+  height: 50%;
   border-radius: 50%;
   border: 2px solid #ffff;
   box-shadow: 0 0 10px #0000;
@@ -51,16 +52,8 @@
   display: block;
   width: 100%;
   background-color: #F7AEF8;
-  
   border-left: 30px;
 
-
-  >#punctuation {
-    position: relative;
-    margin-top: 10px;
-    margin-left: 5px; 
-   
-  }
   >#info{
     color: black;
     font-family: Open Sans;
@@ -68,5 +61,11 @@
     margin-left: 5px; 
     font-weight: bold;
   }
-  
+}
+
+.punctuation {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 5px;
+  width: 150px;
 }

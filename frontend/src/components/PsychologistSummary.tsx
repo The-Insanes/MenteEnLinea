@@ -1,11 +1,7 @@
 import React from 'react';
 import './css/PsychologistSummary.css';
+import { IonAvatar, IonImg } from '@ionic/react';
 
-
-interface Props {
-    className?: string;
-    psycologist?: Psycologist;
-  }
 interface Psycologist {
     id: number
     ProfilePhoto: string;
@@ -16,16 +12,21 @@ interface Psycologist {
     location: number;
   }
 
-
+interface Props {
+    className?: string;
+    psycologist?: Psycologist;
+}
 
 const PsychologistSummary: React.FC<Props> = ({className, psycologist}) => { 
     return (
         <div id = 'pill'>
             <div id = 'leftSide'>
-                <div className='DoctorImageContainer'></div>
+                <IonAvatar className='DoctorImageContainer'>
+                    <IonImg src={`images/${psycologist?.ProfilePhoto}`}></IonImg>
+                </IonAvatar>
             </div>
             <div id = 'rightSide'>
-                <div id = 'punctuation'><img src="{psycologist.ProfilePhoto}" alt="Punctuation" /></div>
+                <IonImg className='punctuation' src={`images/${psycologist?.punctuation}`} alt="Punctuation"></IonImg>
                 <div id = 'info'>
                     <p>Nombre: {psycologist?.name}</p>
                 </div>

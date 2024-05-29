@@ -1,7 +1,12 @@
+.contenedorListaPills {
+    width: 90%;
+    min-width: 370px;
+    max-width: 450px;
+    height: 500px;
+}
+
 .psychoContainer{
     width: 400px;
     height: 600px;
     background-color: blueviolet;
 }
-
-

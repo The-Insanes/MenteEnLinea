@@ -1,6 +1,7 @@
 import React from 'react';
 import { IonList, IonItem, IonContent } from '@ionic/react';
 import PsychologistSummary from './PsychologistSummary';
+import './css/PsychologistList.css'
 
 interface Props {
   psycologists: Psycologist[];
