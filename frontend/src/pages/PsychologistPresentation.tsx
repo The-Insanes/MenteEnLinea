@@ -2,10 +2,10 @@ import './css/PsychologistPresentation.css'
 import { IonPage, IonContent, IonHeader, IonFooter, IonLabel, IonButton } from "@ionic/react";
 import { useState, useEffect } from 'react';
 import FooterPage from "../components/FooterPage";
-import NavBarLogin from "../components/NavBarLogin";
 import ProfileLabel from "../components/ProfileLabel";
 import CommentLabel from '../components/CommentLabel';
 import CommentSection from '../components/CommentSection';
+import NavBar from '../components/NavBar';
 
 const generateItems = () => {
     const comments = []
@@ -58,7 +58,7 @@ const PychologistPage: React.FC<ContainerProps> = (props) => {
     return (
         <IonPage>
             <IonHeader>
-                <NavBarLogin srcLogo='images/logo.svg'></NavBarLogin>
+                <NavBar></NavBar>
             </IonHeader>
 
             <IonContent>

@@ -1,7 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonFooter } from '@ionic/react';
 import { useState, useEffect } from 'react';
 import './css/LoginPage.css';
-import NavBarLogin from '../components/NavBarLogin';
 import Login from '../components/Login';
 import FooterPage from '../components/FooterPage';
 
@@ -89,19 +88,12 @@ const LoginPage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-          <NavBarLogin srcLogo='images/logo.svg'></NavBarLogin>
-      </IonHeader>
-
       <IonContent fullscreen>
         <div className='centered-content'>
-          <Login src_logo='images/logo.svg' verifyEmail={validateEmailName} verifyPassword={validatePassword} onClick={clickButton}></Login>
+          <Login verifyEmail={validateEmailName} verifyPassword={validatePassword} onClick={clickButton}></Login>
         </div>
+        <FooterPage></FooterPage>
       </IonContent>
-
-      <IonFooter>
-        <FooterPage src_logo='images/dark_logo.svg' phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
-      </IonFooter>
     </IonPage>
   );
 };
