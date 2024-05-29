@@ -62,7 +62,6 @@ const CommentSection: React.FC<ContainerProps> = ({ className, comments }) => {
                   loadMoreItems();
                   setTimeout(() => ev.target.complete(), 500);
                   }}
-                  
               >
                   <IonInfiniteScrollContent loadingText="Porfavor Espere..." loadingSpinner="bubbles"></IonInfiniteScrollContent>
               </IonInfiniteScroll>
