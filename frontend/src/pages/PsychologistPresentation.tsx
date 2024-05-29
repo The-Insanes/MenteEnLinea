@@ -1,5 +1,6 @@
 import './css/PsychologistPresentation.css'
 import { IonPage, IonContent, IonHeader, IonFooter, IonLabel, IonButton } from "@ionic/react";
+import { useState, useEffect } from 'react';
 import FooterPage from "../components/FooterPage";
 import NavBarLogin from "../components/NavBarLogin";
 import ProfileLabel from "../components/ProfileLabel";
@@ -19,29 +20,67 @@ const generateItems = () => {
     return comments
 }
 
-const PychologistPage: React.FC = () => {
+interface Psychologist {
+    id: number,
+    ProfilePhoto: string,
+    punctuation: string,
+    name: string,
+    area: string,
+    prevision: string,
+    location: number,
+    specialty: number,
+    description: string,
+    modality: string,
+    price: number
+}
+
+interface ContainerProps {
+    idPsychologist?: number
+}
+
+const PychologistPage: React.FC<ContainerProps> = (props) => {
+    const [psychologist, setPsychologist] = useState<Psychologist>();
     const comments = generateItems();
+
+    useEffect(() => {
+        fetch('data/psychologists.json')
+        .then(response => response.json())
+        .then((data: Psychologist[]) => {
+            for(let i = 0; i < data.length; i++) {
+                if(data[i].id == props.idPsychologist) {
+                    setPsychologist(data[i]);
+                }
+            }
+        });
+    }, []);
     
+    console.log(psychologist)
     return (
         <IonPage>
             <IonHeader>
-                <NavBarLogin></NavBarLogin>
+                <NavBarLogin srcLogo='images/logo.svg'></NavBarLogin>
             </IonHeader>
 
             <IonContent>
                 <div className="profile_presentation">
-                    <ProfileLabel price="XXXXX" method="Online" psychologist_name="Barbara"></ProfileLabel>
+                    <ProfileLabel price={psychologist?.price} 
+                    method={psychologist?.modality} 
+                    psychologist_name={psychologist?.name} 
+                    punctuation={psychologist?.punctuation} 
+                    psychologist_photo={psychologist?.ProfilePhoto} 
+                    prevision={psychologist?.prevision} expert={psychologist?.area}>
+                    </ProfileLabel>
                 </div>
 
                 <CommentLabel className='description-profile' labelName='Descripción' labelInfo='Breve descripción del psicologo'></CommentLabel>
                 
-                <IonLabel className='opinion-label'>Opiniones: </IonLabel>
+                <IonLabel className='opinion-label'>Opiniones:</IonLabel>
                 <CommentSection className='comment-section' comments={comments}></CommentSection>
                 <IonButton className='report-button' fill="clear">Reportar</IonButton>
             </IonContent>
 
             <IonFooter slot='end'>
-                <FooterPage src_logo="dark_logo.svg" phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
+                <FooterPage src_logo="images/dark_logo.svg" phone_number='+569999999' email='mail@example.cl' background='primary'></FooterPage>
             </IonFooter>
         </IonPage>
     );
