@@ -17,14 +17,18 @@ interface Psycologist {
 
 
 const PsychologistList: React.FC<Props> = ({ psycologists }) => {
+  
     return (
-        <IonList>
-        {psycologists.map(psycologist => (
-          <IonItem key={psycologist.id}>
-            <PsychologistSummary psycologist={psycologist} />
-          </IonItem>
-        ))}
+      <IonContent className='contenedorListaPills'>
+        <IonList className='listaPills'>
+          {psycologists.map(psycologist => (
+            <IonItem key={psycologist.id}>
+              <PsychologistSummary psycologist={psycologist} />
+            </IonItem>
+          ))}
         </IonList>
+      </IonContent>
+        
     );
 };
 

@@ -22,9 +22,7 @@ const PsychologistSummary: React.FC<Props> = ({className, psycologist}) => {
     return (
         <div id = 'pill'>
             <div id = 'leftSide'>
-                <div className='DoctorImageContainer'>
-                    
-                </div>
+                <div className='DoctorImageContainer'></div>
             </div>
             <div id = 'rightSide'>
                 <div id = 'punctuation'><img src="{psycologist.ProfilePhoto}" alt="Punctuation" /></div>

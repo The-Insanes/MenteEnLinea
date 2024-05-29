@@ -84,8 +84,8 @@ const PsicologystSearchPage: React.FC = () => {
         const specialtyFiltered = locationFiltered.filter((p: Psycologist) =>
           p.specialty === selectedSpecialty
         );
+        setFilteredPsycologists(specialtyFiltered);
         console.log(specialtyFiltered);
-
         
       })
       .catch(error => {
@@ -94,7 +94,7 @@ const PsicologystSearchPage: React.FC = () => {
   }
 }, [selectedLocation, selectedSpecialty]);
 
-  
+    
 
   
   return (
@@ -117,7 +117,7 @@ const PsicologystSearchPage: React.FC = () => {
                   <IonSelectOption key={location.id} value={location.id}>
                     {location.location}
                   </IonSelectOption>
-              ))}
+                ))}
               </IonSelect>
 
               <IonSelect
@@ -134,10 +134,11 @@ const PsicologystSearchPage: React.FC = () => {
               </IonSelect>
             </div>
           </div>
-         
-          <div className="searchResultsZone">
-            {displayedPsycologists.length > 0 ? (
-              <PsychologistList psycologists={displayedPsycologists} /> ) : (
+          
+          <div className="searchResultZone">
+            {filteredPsycologists.length > 0 ? (
+              <PsychologistList psycologists={filteredPsycologists} />
+            ) : (
               <h3>No se encontraron psicólogos con los criterios seleccionados.</h3>
             )}
           </div>
