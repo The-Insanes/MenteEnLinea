@@ -12,9 +12,9 @@ const paths = [
 const SignupPage: React.FC = () => {
     return(
     <IonPage>
-    <IonContent fullscreen h-full w-full>
-      <div className='centered-content'>
-        <Signup src_logo='public/Images/logo.svg'></Signup>
+    <IonContent className='fondo-singup'>
+      <div className='centered-content-singup'>
+        <Signup src_logo='public/images/logo.svg'></Signup>
       </div>
     </IonContent>
 

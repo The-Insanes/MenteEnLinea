@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .login_base {
-    margin-top: auto;
-    margin-bottom: 15px;
+    margin-top: 100px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 50px;
     background-color: #EEE7E7;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
     border-radius: 35px;
     min-width: 300px;
     max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -54,6 +54,7 @@
 }
 
 .login_buttom {
+    
     display: flex;
     font-family: 'Open Sans', sans-serif;
     width: 70%;
@@ -80,15 +81,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
     min-width: 300px;
     max-width: 350px;
-    gap: 5px;
-    padding: 10px 40px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #EEE7E7;
-    border-radius: 35px;
-    border: 1px #E0E0E0 solid; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
 
     >ion-label {
         font-family: 'Open Sans', sans-serif;
