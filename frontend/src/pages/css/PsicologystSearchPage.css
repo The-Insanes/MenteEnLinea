@@ -1,7 +1,6 @@
 .completePage{
     width: auto;
     height: auto;
-    background-color: #130b75;
     padding: 0;
     align-items: center;
     display: flex;
@@ -23,6 +22,14 @@
     padding: 60px 0px 60px 0px ;
     overflow: hidden;
     
+}
+
+.searchResultZone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
 }
 
 .custom-select{
