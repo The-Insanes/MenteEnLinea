@@ -1,0 +1,71 @@
+#pill{
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  width: 100%;
+  max-width: 1366px;
+  height: 245px;
+  border-radius: 100px;
+  background-color: rgba(217, 62, 231, 0.818);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  align-items: center;
+  
+}
+
+.DoctorImageContainer{
+  background-image: url("images/${psycologist.ProfilePhoto}");
+  background-position: center;
+  background-size: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  width: 80%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid #ffff;
+  box-shadow: 0 0 10px #0000;
+  overflow: hidden;
+
+}
+.DoctorImageContainer:after{
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+#leftSide{
+  display: block;
+  width: 75%; 
+  height: 245px; 
+  background-color: #4F80FF;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+
+}
+
+#rightSide{
+  height: 245px;
+  display: block;
+  width: 100%;
+  background-color: #F7AEF8;
+  border-left: 30px;
+
+  >#info{
+    color: black;
+    font-family: Open Sans;
+    font-size: 15px;
+    margin-left: 5px; 
+    font-weight: bold;
+  }
+}
+
+.punctuation {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 5px;
+  width: 150px;
+}
