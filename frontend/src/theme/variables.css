@@ -1,2 +1,35 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* fonts */
+    --font-open-sans: "Open Sans";
+  
+    /* font sizes */
+    --font-size-5xl: 24px;
+    --font-size-base: 16px;
+    --font-size-9xl: 28px;
+  
+    /* Colors */
+    --color-royalblue-100: #4f80ff;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-mediumorchid: #ff4de6;
+  
+    /* Gaps */
+    --gap-xl: 20px;
+    --gap-3xs: 10px;
+    --gap-11xl: 30px;
+  
+    /* Paddings */
+    --padding-3xs: 10px;
+    --padding-12xs: 1px;
+    --padding-8xs: 5px;
+    --padding-11xs: 2px;
+    --padding-xl: 20px;
+  
+    /* Border radiuses */
+    --br-xl: 20px;
+    --br-31xl: 50px;
+    --br-6xl: 25px;
+  }
+  

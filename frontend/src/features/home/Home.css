@@ -1,0 +1,356 @@
+.habla-con-un,
+.permtenos-acompaarte {
+  margin: 0 10%;
+  align-self: stretch;
+  position: relative;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.habla-con-un {
+  height: 109px;
+  font-size: inherit;
+  font-weight: 600;
+}
+.permtenos-acompaarte {
+  height: 52px;
+  font-size: var(--font-size-9xl);
+  font-weight: 800;
+  color: var(--color-mediumorchid);
+}
+.reserva-ahora {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+  color: var(--color-white);
+  text-align: left;
+}
+.reserva-ahora a { 
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+  color: var(--color-white);
+  text-align: left;
+  text-decoration: none; /* Añadido para quitar el subrayado */
+}
+.boton,
+.reserve-now-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.boton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) var(--padding-xl);
+  background-color: var(--color-royalblue-100);
+  border-radius: var(--br-6xl);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.boton:hover {
+  background-color: #3666e6;
+}
+.reserve-now-button {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.content-area,
+.habla-con-un-psiclogo-online-parent,
+.transparency {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.habla-con-un-psiclogo-online-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-11xl);
+}
+.content-area,
+.transparency {
+  align-self: stretch;
+  box-sizing: border-box;
+}
+.content-area {
+  margin-top: 20vh;
+  flex-direction: row;
+  padding: 0 var(--padding-12xs);
+}
+.transparency {
+  flex-direction: column;
+  padding: 0 0 93.5px;
+  gap: 68.5px;
+  background-image: url(/textotransparencia@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-royalblue-100);
+  font-family: var(--font-open-sans);
+}
+
+/* Characteristics */
+
+.fondo-caracteristica {
+  top: 118px;
+  left: 0;
+  border-radius: 60px;
+  background-color: var(--color-mediumorchid);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  width: 315px;
+  height: 85px;
+  position: relative;
+}
+.figura-icon,
+.wrapper-figura {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+}
+.figura-icon {
+  width: 100%;
+  object-fit: contain;
+  left: 0;
+  top: 8px;
+  transform: scale(1.191);
+}
+.wrapper-figura {
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  border-radius: var(--br-31xl) 150px 100px var(--br-31xl);
+  max-height: 100%;
+  width: 251px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fondo-caracteristica-parent {
+  height: 321px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.foto-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; /* Cambiado de flex-start a center */
+  
+}
+
+.foto-wrapper {
+  align-self: stretch;
+  padding: 0 57px 0 57.5px;
+}
+.logo-caracteristica-1-icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.construction-svgrepo-com-1-icon,
+.logo-caracteristica-2-icon,
+.logo-caracteristica-3-icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  border-radius: var(--br-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.phone-number {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 13%;
+}
+.caracteristica-1,
+.caracteristica-2,
+.caracteristica-3,
+.caracteristica-4 {
+  align-self: stretch;
+  position: relative;
+  font-weight: 300;
+}
+.bajada,
+.caracteristicas,
+.logo-dark,
+.texto {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.logo-dark {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 34px;
+  gap: var(--gap-11xl);
+  min-width: 203px;
+}
+.bajada,
+.caracteristicas,
+.texto {
+  max-width: 100%;
+  position: relative;
+}
+.caracteristicas {
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 3px;
+  gap: var(--gap-3xs);
+  flex-shrink: 0;
+  margin-top: 10%;
+}
+.bajada,
+.texto {
+  align-self: stretch;
+}
+.texto {
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+.bajada {
+  background-color: var(--color-white);
+  flex-direction: column;
+  padding: 30px 0 27px;
+  gap: var(0);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-open-sans);
+  margin: 0 10%;
+}
+
+.bajada {
+  display: flex;
+  flex-direction: row; /* Colocar elementos uno al lado del otro */
+  justify-content: center;
+  align-items: center;
+  gap: var(0); /* Espacio entre los elementos */
+  padding: 30px 0 27px;
+  background-color: var(--color-white);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-open-sans);
+}
+
+.foto-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 57px 0 57.5px;
+  position: absolute;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+
+}
+
+
+.foto-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  position: relative; /* Añadido */
+  
+  align-self: stretch;
+}
+
+.fondo-caracteristica-parent {
+  height: 321px;
+  position: relative; /* Cambiado de absolute a relative */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.foto-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-self: stretch;
+  position: relative;
+  padding: 0 20px; /* Ajusta el padding según sea necesario */
+}
+
+
+/* Responsive */
+@media (max-width: 1084px) {
+  .bajada {
+    flex-direction: column; /* Apilar elementos verticalmente */
+    
+  }
+
+  .foto-wrapper,
+  .texto {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 490px){
+.logo-dark {
+  gap: 40px;
+}
+
+}
+
+@media screen and (min-width: 573px){
+.logo-dark {
+  gap: 54px;
+}
+
+}
+@media screen and (max-width: 380px) {
+.footer-phone {
+  gap: 54px;
+}
+}
+@media screen and (max-width: 361px) {
+.footer-phone {
+  flex-wrap: wrap;
+}
+}
+@media screen and (max-width: 357px) {
+.texto {
+  height: auto;
+}
+}
+
+ion-modal {
+  --border-radius: 15px;
+  --width: 400px;
+  --ion-background-color: #EEE7E7;
+  --height: 550px
+}
+
+
+.close-button {
+  position: absolute;
+  top: 10px; /* ajusta según sea necesario */
+  right: 10px; /* ajusta según sea necesario */
+  cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre la x */
+  font-size: 24px; /* Tamaño de la x */
+}
+

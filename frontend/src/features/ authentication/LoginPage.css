@@ -1,0 +1,14 @@
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    height: 72%;
+    background: #EEE7E7;
+}
+
+.fondo{
+    --background: #EEE7E7;
+}
+    

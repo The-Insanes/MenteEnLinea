@@ -1,0 +1,31 @@
+.label {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%; /* Use full width of the container */
+    background: white; 
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); 
+    border-radius: 8px;
+    border: 1px #E0E0E0 solid; 
+    display: inline-flex;
+}
+
+.left_icon {
+    padding-left: 12px;
+}
+
+.error-msg {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: normal;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 400px; /* Ensure a consistent max-width */
+    margin-bottom: 15px; /* Space between inputs */
+}

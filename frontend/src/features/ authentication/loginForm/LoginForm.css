@@ -1,0 +1,102 @@
+.login-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+}
+
+.login-container .login .login-logo {
+    margin: 10px 0px;
+}
+
+.login-container .login .divider {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 11px;
+}
+
+.login-container .login .buttom_selection {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px #E0E0E0 solid;
+}
+
+.login-container .login .button_icon {
+    margin-right: 5px;
+}
+
+.login-container .login .button_label {
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+}
+
+.login-container .login .login_text {
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+    font-size: 14px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #4F80FF;
+}
+
+.login-container .login .login_button {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    width: 70%;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-container .login .input_login {
+    margin-top: 15px;
+}
+
+.login-container .login .social-media {
+    display: flex;
+    width: 100%;
+}
+
+.login-container .login .social-media .button_selection {
+    flex: 1;
+    margin: 5px;
+}
+
+.login-container .login .register_base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 40px;
+    background-color: #EEE7E7;
+}
+
+.login-container .login .register_base > ion-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.login-container .login .register_base > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #4F80FF;
+    text-decoration: none;
+}

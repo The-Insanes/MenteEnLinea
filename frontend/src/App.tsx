@@ -1,7 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import PychologistPage from './pages/PsychologistPresentation';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,31 +31,30 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Home from './pages/Home';
-import LoginPage from './pages/LoginPage';
-import FooterPage from './components/FooterPage';
-import NavBar from './components/NavBar';
-import Signup from './components/Signup';
-import SignupPage from './pages/SignupPage';
+
+/* Imports Pages */
+import Home from './features/home/Home';
+import PychologistPage from './features/pychologistPage/PychologistPage';
+import PsychologistSearchPage from './features/psychologistSearch/PsychologistSearch';
+import PsychologistSearch from './features/psychologistSearch/PsychologistSearch';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <NavBar></NavBar>
         <IonRouterOutlet>
           <Route exact path="/Home">
             <Home />
           </Route>
-          <Route exact path="/LoginPage">
-            <LoginPage />
-          </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
           </Route>
-          <Route exact path="/SignupPage">
-            <SignupPage />
+          <Route exact path="/PsychologistPage">
+            <PychologistPage />
+          </Route>
+          <Route exact path="/PsycologistSearch">
+            <PsychologistSearch />
           </Route>
         </IonRouterOutlet>
     </IonReactRouter>

@@ -3,7 +3,7 @@ import './css/SignupSelect.css'
 import { IonInput, IonIcon, IonButton, IonLabel, IonSelect, IonSelectOption} from '@ionic/react';
 import { eye, lockClosed } from 'ionicons/icons';
 import { TextFieldTypes } from '@ionic/core';
-import Signup from './Signup';
+import Signup from '../features/ authentication/signupForm/Signup';
 
 
 interface ContainerProps {
